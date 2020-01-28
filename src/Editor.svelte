@@ -2,6 +2,13 @@
   import TextArea from "./TextAreaAutosize.svelte";
 
   let drabbleText = "";
+
+  export let wordcount;
+  $: wordcount = countWords(drabbleText);
+
+  function countWords(text) {
+    return text.length; // TODO
+  }
 </script>
 
 <style>

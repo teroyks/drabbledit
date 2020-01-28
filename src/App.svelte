@@ -1,6 +1,8 @@
 <script>
   import Editor from "./Editor.svelte";
 
+  let wordcount = 0;
+
   export let name;
 </script>
 
@@ -27,7 +29,7 @@
 </style>
 
 <main>
-  <header>word count: 0</header>
+  <header>word count: {wordcount}</header>
   <h1 contenteditable="true">Hello {name}!</h1>
-  <Editor />
+  <Editor bind:wordcount />
 </main>
