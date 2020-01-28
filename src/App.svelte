@@ -1,4 +1,6 @@
 <script>
+  import Editor from "./Editor.svelte";
+
   export let name;
 </script>
 
@@ -25,10 +27,7 @@
 </style>
 
 <main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the
-    <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
-    to learn how to build Svelte apps.
-  </p>
+  <header>word count: 0</header>
+  <h1 contenteditable="true">Hello {name}!</h1>
+  <Editor />
 </main>
