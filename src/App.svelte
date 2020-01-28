@@ -13,9 +13,13 @@
   }
 
   h1 {
-    color: #ff3e00;
+    color: #00705e;
     font-size: 4em;
     font-weight: 100;
+  }
+
+  .error {
+    color: red;
   }
 
   @media (min-width: 640px) {
@@ -26,7 +30,9 @@
 </style>
 
 <main>
-  <header>word count: {wordcount}</header>
+  <header class={wordcount > 100 ? 'error' : ''}>
+    word count: {wordcount}
+  </header>
   <h1 contenteditable="true">Title: a Drabble</h1>
   <Editor bind:wordcount />
 </main>
