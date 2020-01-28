@@ -2,8 +2,6 @@
   import Editor from "./Editor.svelte";
 
   let wordcount = 0;
-
-  export let name;
 </script>
 
 <style>
@@ -16,7 +14,6 @@
 
   h1 {
     color: #ff3e00;
-    text-transform: uppercase;
     font-size: 4em;
     font-weight: 100;
   }
@@ -30,6 +27,6 @@
 
 <main>
   <header>word count: {wordcount}</header>
-  <h1 contenteditable="true">Hello {name}!</h1>
+  <h1 contenteditable="true">Title: a Drabble</h1>
   <Editor bind:wordcount />
 </main>
