@@ -5,6 +5,9 @@
   export let maxRows;
   export let placeholder = "";
 
+  // text area DOM node
+  let editorField;
+
   $: minHeight = `${1 + minRows * 1.2}em`;
   $: maxHeight = maxRows ? `${1 + maxRows * 1.2}em` : `auto`;
 
@@ -13,13 +16,13 @@
   // resize the field if the element's content is scrolled
   // this does the resizing also when the content is a long line that wraps
   function resize(content) {
-    const field = document.getElementById("editField");
-    if (!field) return;
+    if (!editorField) return;
 
-    const scrolledBy = field.scrollTop;
+    const scrolledBy = editorField.scrollTop;
     if (!scrolledBy) return;
 
-    field.style.height = `${field.scrollHeight + scrolledBy}px`;
+    // console.debug(`resize by ${scrolledBy}`);
+    editorField.style.height = `${editorField.scrollHeight + scrolledBy}px`;
   }
 </script>
 
@@ -54,5 +57,5 @@
     {value + '\n'}
   </pre>
 
-  <textarea id="editField" bind:value {placeholder} />
+  <textarea bind:value bind:this={editorField} {placeholder} />
 </div>
