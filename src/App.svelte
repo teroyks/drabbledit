@@ -1,8 +1,13 @@
 <script>
+  import { onMount } from "svelte";
   import Editor from "./Editor.svelte";
   import ProgressBar from "./ProgressBar.svelte";
 
   let wordcount = 0;
+
+  onMount(() => {
+    document.querySelector("#title").focus();
+  });
 </script>
 
 <style>
@@ -34,6 +39,6 @@
   <header class={wordcount > 100 ? 'error' : ''}>
     <ProgressBar percentage={wordcount} />
   </header>
-  <h1 contenteditable="true">Title: a Drabble</h1>
+  <h1 id="title" contenteditable="true">Title (A Drabble)</h1>
   <Editor bind:wordcount />
 </main>
