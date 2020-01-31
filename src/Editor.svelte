@@ -10,8 +10,11 @@
 </script>
 
 <style>
-  article {
-    text-align: left;
+  h1 {
+    color: #00705e;
+    font-size: 4em;
+    font-weight: 100;
+    text-align: center;
   }
 
   /* preview */
@@ -21,6 +24,7 @@
 </style>
 
 <article>
+  <h1 id="title" contenteditable="true">Title (A Drabble)</h1>
   <TextArea
     bind:value={drabbleText}
     placeholder="Write here. 🚀"
