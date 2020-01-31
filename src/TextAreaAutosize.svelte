@@ -1,6 +1,5 @@
 <script>
   // from: https://svelte.dev/repl/40f4c7846e6f4052927ff5f9c5271b66?version=3.18.1
-
   export let value = "";
   export let minRows = 1;
   export let maxRows;
@@ -8,6 +7,20 @@
 
   $: minHeight = `${1 + minRows * 1.2}em`;
   $: maxHeight = maxRows ? `${1 + maxRows * 1.2}em` : `auto`;
+
+  $: resize(value);
+
+  // resize the field if the element's content is scrolled
+  // this does the resizing also when the content is a long line that wraps
+  function resize(content) {
+    const field = document.getElementById("editField");
+    if (!field) return;
+
+    const scrolledBy = field.scrollTop;
+    if (!scrolledBy) return;
+
+    field.style.height = `${field.scrollHeight + scrolledBy}px`;
+  }
 </script>
 
 <style>
@@ -41,5 +54,5 @@
     {value + '\n'}
   </pre>
 
-  <textarea bind:value {placeholder} />
+  <textarea id="editField" bind:value {placeholder} />
 </div>
