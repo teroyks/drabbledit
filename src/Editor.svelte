@@ -1,12 +1,24 @@
 <script>
   import countWords from "./helpers/wordcount";
-
   import TextArea from "./TextAreaAutosize.svelte";
 
-  let drabbleText = "";
+  const defaultTitle = "Title";
+
+  let title = localStorage.getItem("title") || defaultTitle;
+  let drabbleText = localStorage.getItem("text");
 
   export let wordcount;
   $: wordcount = countWords(drabbleText);
+
+  $: {
+    localStorage.setItem("title", title);
+  }
+  $: {
+    localStorage.setItem("text", drabbleText);
+  }
+  $: {
+    localStorage.setItem("word count", wordcount);
+  }
 </script>
 
 <style>
@@ -24,7 +36,7 @@
 </style>
 
 <article>
-  <h1 id="title" contenteditable="true">Title (A Drabble)</h1>
+  <h1 id="title" contenteditable="true" bind:textContent={title}>{title}</h1>
   <TextArea
     bind:value={drabbleText}
     placeholder="Write here. 🚀"
@@ -32,4 +44,4 @@
     maxRows={40} />
 </article>
 
-<pre>{drabbleText}</pre>
+<!-- <pre>{drabbleText}</pre> -->
