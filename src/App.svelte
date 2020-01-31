@@ -1,5 +1,6 @@
 <script>
   import Editor from "./Editor.svelte";
+  import ProgressBar from "./ProgressBar.svelte";
 
   let wordcount = 0;
 </script>
@@ -31,7 +32,7 @@
 
 <main>
   <header class={wordcount > 100 ? 'error' : ''}>
-    word count: {wordcount}
+    <ProgressBar percentage={wordcount} />
   </header>
   <h1 contenteditable="true">Title: a Drabble</h1>
   <Editor bind:wordcount />
