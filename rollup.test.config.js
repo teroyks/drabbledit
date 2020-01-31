@@ -8,7 +8,7 @@ export default {
     sourcemap: true,
     format: "cjs",
     name: "tests",
-    file: "public/build/bundle-tests.js",
+    file: "spec/build/bundle-tests.js",
   },
   plugins: [
     multi(),
