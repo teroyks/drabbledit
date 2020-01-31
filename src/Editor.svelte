@@ -10,15 +10,9 @@
   export let wordcount;
   $: wordcount = countWords(drabbleText);
 
-  $: {
-    localStorage.setItem("title", title);
-  }
-  $: {
-    localStorage.setItem("text", drabbleText);
-  }
-  $: {
-    localStorage.setItem("word count", wordcount);
-  }
+  $: localStorage.setItem("title", title.trim());
+  $: localStorage.setItem("text", drabbleText);
+  $: localStorage.setItem("word count", wordcount);
 </script>
 
 <style>
