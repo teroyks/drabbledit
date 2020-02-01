@@ -1,13 +1,8 @@
 <script>
-  import { onMount } from "svelte";
   import Editor from "./Editor.svelte";
   import ProgressBar from "./ProgressBar.svelte";
 
   let wordcount = 0;
-
-  onMount(() => {
-    document.querySelector("#title").focus();
-  });
 </script>
 
 <style>
