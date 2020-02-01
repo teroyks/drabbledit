@@ -5,7 +5,7 @@
   const defaultTitle = "Title";
 
   let title = localStorage.getItem("title") || defaultTitle;
-  let drabbleText = localStorage.getItem("text");
+  let drabbleText = localStorage.getItem("text") || "";
 
   export let wordcount;
   $: wordcount = countWords(drabbleText);
