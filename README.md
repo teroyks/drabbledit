@@ -15,6 +15,6 @@ A simple drabble editor in the browser – very much an alpha version.
 9. Mobile: sticky header.
 10. Move cursor to the end of field content on focus.
 11. Set focus to text field on load if title is different from default.
-12. Drabble preview.
+12. ~~Drabble preview~~
 13. Mark words over max length in editor.
 14. Maybe use XState for handling title states?

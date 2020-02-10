@@ -1,8 +1,13 @@
 <script>
   import Editor from "./Editor.svelte";
+  import Modal from "./Modal.svelte";
   import ProgressBar from "./ProgressBar.svelte";
 
   let wordcount = 0;
+  let previewVisible = false;
+
+  const showPreview = () => (previewVisible = true);
+  const hidePreview = () => (previewVisible = false);
 </script>
 
 <style>
@@ -32,4 +37,13 @@
 </header>
 <main>
   <Editor bind:wordcount />
+  <button on:click={showPreview}>Preview</button>
 </main>
+
+{#if previewVisible}
+  <Modal on:close={hidePreview}>
+    <h2 slot="header">{localStorage.getItem('title')}</h2>
+
+    <pre>{localStorage.getItem('text')}</pre>
+  </Modal>
+{/if}

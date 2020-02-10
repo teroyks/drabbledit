@@ -12,10 +12,7 @@
 </script>
 
 <style>
-  /* preview */
-  pre {
-    white-space: pre-line;
-  }
+
 </style>
 
 <article>
@@ -26,5 +23,3 @@
     minRows={4}
     maxRows={40} />
 </article>
-
-<!-- <pre>{drabbleText}</pre> -->
