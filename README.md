@@ -6,9 +6,9 @@ A simple drabble editor in the browser – very much an alpha version.
 
 1. ~~Fix editor size on word wrap.~~
 2. ~~Automatically remove default title on change.~~
-3. ignore non-words
-4. Export/email (preview?)
-5. Correctly handle non-breaking space in wordcount
+3. ~~ignore non-words~~
+4. ~~Correctly handle non-breaking space in wordcount~~
+5. Export/email (preview?)
 6. Smartypants-style smart quotes
 7. Ignore subheadings in word count.
 8. Mobile: editor field size.
