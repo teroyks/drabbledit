@@ -62,8 +62,14 @@
   <Editor bind:wordcount />
 </main>
 <footer>
-  <button on:click={showPreview}>Preview</button>
-  <button on:click={copyToClipboard}>Copy</button>
+  <button on:click={showPreview}>
+    <i class="far fa-file" />
+    Preview
+  </button>
+  <button on:click={copyToClipboard}>
+    <i class="far fa-clipboard" />
+    Copy
+  </button>
 </footer>
 
 {#if previewVisible}

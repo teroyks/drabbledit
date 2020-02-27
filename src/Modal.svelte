@@ -78,5 +78,8 @@
   <slot />
 
   <!-- svelte-ignore a11y-autofocus -->
-  <button autofocus on:click={close}>close</button>
+  <button autofocus on:click={close}>
+    <i class="fas fa-times" />
+    close
+  </button>
 </div>
