@@ -12,7 +12,7 @@
     box-sizing: border-box;
     border: 1px solid #eee;
     line-height: 1.2;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 </style>
 
