@@ -12,13 +12,21 @@
 
 <style>
   header {
+    flex: 0 1 auto;
+    margin-bottom: 1rem;
+    margin-top: 8px;
+
     text-align: center;
   }
 
   main {
-    padding: 1em;
-    max-width: 240px;
+    flex: 1 1 auto;
+    width: 100%;
     margin: 0 auto;
+  }
+
+  footer {
+    flex: 0 1 auto;
   }
 
   pre {

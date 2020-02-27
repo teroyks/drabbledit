@@ -12,7 +12,12 @@
 </script>
 
 <style>
-
+  article {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+  }
 </style>
 
 <article>

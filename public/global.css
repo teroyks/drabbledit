@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   color: #333;
   margin: 0;
@@ -5,9 +9,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 2rem 1fr 3rem;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
 }
 
 a {
