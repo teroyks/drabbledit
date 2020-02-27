@@ -13,10 +13,8 @@
 
 <style>
   article {
-    flex: 1;
-
-    display: flex;
-    flex-flow: column;
+    display: grid;
+    grid-template-rows: min-content auto;
     width: 100%;
   }
 </style>

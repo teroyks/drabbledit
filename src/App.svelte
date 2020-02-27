@@ -30,13 +30,10 @@
   }
 
   main {
-    flex: 1;
     width: 100%;
     margin: 0 auto;
 
-    display: flex;
-    /* display: -webkit-box; */
-    flex-flow: column;
+    display: grid;
   }
 
   pre {

@@ -6,8 +6,9 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 
   height: 100vh;
-  display: flex;
-  flex-flow: column;
+  display: grid;
+  align-items: stretch;
+  grid-template-rows: min-content auto min-content;
 }
 
 a {
