@@ -1,7 +1,7 @@
 <script>
   import countWords from "./helpers/wordcount";
   import Title from "./EditableTitle.svelte";
-  import TextArea from "./TextAreaAutosize.svelte";
+  import TextArea from "./TextArea.svelte";
   let drabbleText = localStorage.getItem("text") || "";
 
   export let wordcount;
