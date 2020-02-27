@@ -41,8 +41,10 @@
 </header>
 <main>
   <Editor bind:wordcount />
-  <button on:click={showPreview}>Preview</button>
 </main>
+<footer>
+  <button on:click={showPreview}>Preview</button>
+</footer>
 
 {#if previewVisible}
   <Modal on:close={hidePreview}>
