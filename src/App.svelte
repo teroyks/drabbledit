@@ -8,6 +8,16 @@
 
   const showPreview = () => (previewVisible = true);
   const hidePreview = () => (previewVisible = false);
+
+  const copyToClipboard = () => {
+    const drabble = `${localStorage.getItem("title")}\n\n${localStorage.getItem(
+      "text"
+    )}`;
+    navigator.clipboard.writeText(drabble).catch(err => {
+      alert("ERROR: copying failed");
+      console.error(err);
+    });
+  };
 </script>
 
 <style>
@@ -52,6 +62,7 @@
 </main>
 <footer>
   <button on:click={showPreview}>Preview</button>
+  <button on:click={copyToClipboard}>Copy</button>
 </footer>
 
 {#if previewVisible}
