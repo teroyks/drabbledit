@@ -21,6 +21,10 @@
     margin: 0 auto;
   }
 
+  pre {
+    white-space: pre-wrap;
+  }
+
   .error {
     color: red;
   }
