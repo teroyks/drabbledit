@@ -1,4 +1,5 @@
 <script>
+  import * as clipboard from "clipboard-polyfill";
   import Editor from "./Editor.svelte";
   import Modal from "./Modal.svelte";
   import ProgressBar from "./ProgressBar.svelte";
@@ -13,7 +14,7 @@
     const drabble = `${localStorage.getItem("title")}\n\n${localStorage.getItem(
       "text"
     )}`;
-    navigator.clipboard.writeText(drabble).catch(err => {
+    clipboard.writeText(drabble).catch(err => {
       alert("ERROR: copying failed");
       console.error(err);
     });
