@@ -34,6 +34,10 @@
     flex: 1 1 auto;
     width: 100%;
     margin: 0 auto;
+
+    display: flex;
+    flex-flow: column;
+    height: 100%;
   }
 
   footer {
