@@ -13,10 +13,11 @@
 
 <style>
   article {
+    flex: 1;
+
     display: flex;
     flex-flow: column;
     width: 100%;
-    height: 100%;
   }
 </style>
 

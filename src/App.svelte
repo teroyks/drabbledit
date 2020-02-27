@@ -23,7 +23,6 @@
 
 <style>
   header {
-    flex: 0 1 auto;
     margin-bottom: 1rem;
     margin-top: 8px;
 
@@ -31,17 +30,13 @@
   }
 
   main {
-    flex: 1 1 auto;
+    flex: 1;
     width: 100%;
     margin: 0 auto;
 
     display: flex;
+    /* display: -webkit-box; */
     flex-flow: column;
-    height: 100%;
-  }
-
-  footer {
-    flex: 0 1 auto;
   }
 
   pre {
