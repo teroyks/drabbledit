@@ -19,6 +19,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "clipboard-polyfill": "^2.8.6",
     "sirv-cli": "^0.4.4"
   },
   "mocha": {

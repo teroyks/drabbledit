@@ -1,7 +1,7 @@
 <script>
   import countWords from "./helpers/wordcount";
   import Title from "./EditableTitle.svelte";
-  import TextArea from "./TextAreaAutosize.svelte";
+  import TextArea from "./TextArea.svelte";
   let drabbleText = localStorage.getItem("text") || "";
 
   export let wordcount;
@@ -12,9 +12,10 @@
 </script>
 
 <style>
-  /* preview */
-  pre {
-    white-space: pre-line;
+  article {
+    display: grid;
+    grid-template-rows: min-content auto;
+    width: 100%;
   }
 </style>
 
@@ -26,5 +27,3 @@
     minRows={4}
     maxRows={40} />
 </article>
-
-<!-- <pre>{drabbleText}</pre> -->

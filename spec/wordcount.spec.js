@@ -26,5 +26,17 @@ describe('Word count', function () {
     assert.equal(countWords('  foo bar   \n\n \n'), 2)
   })
 
+  it('should ignore dialog dashes', function () {
+    assert.equal(countWords('— dialog line\n— second line\n'), 4)
+  })
+
+  it('should ignore dashes', function () {
+    assert.equal(countWords('Do not count en – or em — dashes'), 7)
+  })
+
+  it('should understand non-breaking spaces', function () {
+    assert.equal(countWords('Non breaking spaces'), 3)
+  })
+
   it('should ignore subheadings')
 })
